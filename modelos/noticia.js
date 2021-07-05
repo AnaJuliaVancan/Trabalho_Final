@@ -6,3 +6,7 @@ class Noticia{
     this._description = description;
   }
 }
+
+get mostar() {
+  return this.mostarNoticia();
+}
