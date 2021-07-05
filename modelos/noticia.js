@@ -18,13 +18,13 @@ get mostar() {
   }
 
 mostrarNoticia(){
-  if (this._titulo != " " && this._resumo != " " && this._texto != " ") {
+  if (this._title != " " &&  this._author != " " && this._description != " ") {
 
       return `
-        <h1>${this._titulo}</h1>
-        <div>${this._dataPubli}</div>
-        <div>${this._resumo}</div><br>
-        <div>${this._texto}</div>
+        <h1>${this._title}</h1>
+        <div>${this._publishedAt}</div>
+        <div>${this._author}</div><br>
+        <div>${this._description}</div>
       `;
 
       //return this._titulo + "\n" + "\n" + this._dataPubli + "\n" + this._resumo + "\n\n" + this._texto;

@@ -10,7 +10,6 @@ XHM.onload = function () {
   let noticias = XHM.response;
 
   noticias.forEach(function(noticia) {
-    let imagem = noticia.imagem;
     let title = noticia.title;
     let publishedAt = noticia.publishedAt;
     let author = noticia.author;
