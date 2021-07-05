@@ -1,9 +1,10 @@
 class Noticia{
-  constructor(title, publishedAt, author, description){
+  constructor(title, publishedAt, author, description, url, content){
     this._title = title;
     this._publishedAt = publishedAt;
     this._author = author;
     this._description = description;
+    this._url = url;
   }
 }
 
@@ -25,6 +26,7 @@ mostrarNoticia(){
         <div>${this._publishedAt}</div>
         <div>${this._author}</div><br>
         <div>${this._description}</div>
+        <div>${this._content}</div>
       `;
 
       //return this._titulo + "\n" + "\n" + this._dataPubli + "\n" + this._resumo + "\n\n" + this._texto;
