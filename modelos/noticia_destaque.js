@@ -4,10 +4,25 @@ class NoticiaDestaque extends Noticia {
     this._imagemDestaque = imagemDestaque;
   }
 
-  mostrarNoticiaDestaque(){
-    return this._imagemDestaque;
+  mostrarNoticiaDestaque(_imagemDestaque) {
+    if (_imagemDestaque != " ") {
+
+      return `
+        <div>${this._imagemDestaque}</div>
+      `;
+      //return this._imagemDestaque;
+    } else {
+      throw new ErroCustomizado("Algo está vazio!Cheque se a imagem está preenchida");
+    }
   }
 
   get mostrarDestaque() {
-    return this.mostrarNoticiaDestaque();
+     try {
+      return this.mostrarNoticiaDestaque();
+    } catch (erro) {
+      return erro.stack
+    } finally {
+      console.log("Código finalizado com sucesso!")
+    }
   }
+}
