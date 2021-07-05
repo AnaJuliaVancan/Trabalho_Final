@@ -10,3 +10,7 @@ class Noticia{
 get mostar() {
   return this.mostarNoticia();
 }
+
+mostrarNoticia(){
+  return this._title + "\n" + this._publishedA + "\n" + this._author + "\n\n" + this._description;
+}
