@@ -4,11 +4,11 @@ class NoticiaDestaque extends Noticia {
     this._urlToImage = urlToImage;
   }
 
-  mostrarNoticiaDestaque(_imagemDestaque) {
-    if (_imagemDestaque != " ") {
+  mostrarNoticiaDestaque(_urlToImage) {
+    if (_urlToImage != " ") {
 
       return `
-        <div>${this._imagemDestaque}</div>
+        <div>${this._urlToImage}</div>
       `;
       //return this._imagemDestaque;
     } else {
