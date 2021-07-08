@@ -9,13 +9,14 @@ let elemento = document.getElementById('noticias');
 XHM.onload = function () {
   let noticias = XHM.response;
 
-  noticias.forEach(function(noticia) {
+  noticias.forEarch(function (noticia) {
     let title = noticia.title;
     let publishedAt = noticia.publishedAt;
     let author = noticia.author;
-    let description = noticia.description
+    let description = noticia.description;
+    let url = noticia.url;
 
-    let n = new Noticia(title, publishedAt, author, description);
+    let n = new Noticia(title, publishedAt, author, description, url);
 
     elemento.insertAdjacentHTML('afterbegin', n.mostrar)
   })
