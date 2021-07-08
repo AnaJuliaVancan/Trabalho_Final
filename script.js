@@ -4,8 +4,6 @@ XHM.open('GET', requestURL);
 XHM.responseType = 'json';
 XHM.send();
 
-let elemento = document.getElementById('noticias');
-
 XHM.onload = function () {
   let noticias = XHM.response.articles;
   let elemento1 = document.getElementById('noticias');
