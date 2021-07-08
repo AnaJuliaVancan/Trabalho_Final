@@ -25,6 +25,6 @@ XHM.onload = function () {
 
     let n = new Noticia(title, publishedAt, author, description, url);
 
-    elemento.insertAdjacentHTML('afterbegin', n.mostrar)
+    elemento.insertAdjacentHTML('afterbegin', n.mostrarNoticia)
   })
 }
