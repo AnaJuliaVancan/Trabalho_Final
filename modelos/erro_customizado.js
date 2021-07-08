@@ -1,5 +1,5 @@
-class ErroCustomizado extends Error{
-  constructor(mensage){
+class ErroCustomizado extends Error {
+  constructor(mensage) {
     super(mensage);
     this.name = "ErradoError"
   }
