@@ -1,7 +1,7 @@
 class NoticiaDestaque extends Noticia {
-  constructor() {
-    super(imagemDestaque);
-    this._imagemDestaque = imagemDestaque;
+  constructor(urlToImage, title, publishedAt, author, description, url) {
+    super(title, publishedAt, author, description, url);
+    this._urlToImage = urlToImage;
   }
 
   mostrarNoticiaDestaque(_imagemDestaque) {
@@ -17,7 +17,7 @@ class NoticiaDestaque extends Noticia {
   }
 
   get mostrarDestaque() {
-     try {
+    try {
       return this.mostrarNoticiaDestaque();
     } catch (erro) {
       return erro.stack
