@@ -14,6 +14,8 @@ XHM.onload = function () {
   let destaque = new NoticiaDestaque(noticias[0].urlToImage, noticias[0].title, noticias[0].publishedAt, noticias[0].author, noticias[0].description, noticias[0].url);
   elemento2.insertAdjacentHTML('afterbegin', destaque.mostrarDestaque);
 
+  noticias.shift();
+
   noticias.forEarch(function (noticia) {
     let title = noticia.title;
     let publishedAt = noticia.publishedAt;
