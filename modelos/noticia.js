@@ -6,17 +6,16 @@ class Noticia {
     this._description = description;
     this._url = url;
   }
-}
 
-get mostrarNoticia() {
-  try {
-    return this.mostrarNoticia();
-  } catch (erro) {
-    return erro.stack
-  } finally {
-    console.log("Código finalizado com sucesso!")
+  get mostrarNoticia() {
+    try {
+      return this.aparecerNoticia();
+    } catch (erro) {
+      return erro.stack
+    } finally {
+      console.log("Código finalizado com sucesso!")
+    }
   }
-}
 
   aparecerNoticia() {
     if (this._title != " " && this._author != " " && this._description != " " && this._publishedAt != " " && this._url != " ") {
@@ -41,8 +40,8 @@ get mostrarNoticia() {
               </div>
             </div>
       `
-  } else {
-    throw new ErroCustomizado("Algo está vazio!Cheque se titulo, resumo ou texto estão preenchidos!!!");
+    } else {
+      throw new ErroCustomizado("Algo está vazio!Cheque se titulo, resumo ou texto estão preenchidos!!!");
+    }
   }
-}
 }

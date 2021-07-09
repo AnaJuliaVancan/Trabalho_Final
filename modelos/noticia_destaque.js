@@ -4,7 +4,7 @@ class NoticiaDestaque extends Noticia {
     this._urlToImage = urlToImage;
   }
 
- mostrarNoticiaDestaque(_urlToImage) {
+  mostrarNoticiaDestaque(_urlToImage) {
     if (_urlToImage != " ") {
 
       return `
