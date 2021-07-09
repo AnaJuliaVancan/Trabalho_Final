@@ -4,13 +4,22 @@ class NoticiaDestaque extends Noticia {
     this._urlToImage = urlToImage;
   }
 
-  mostrarNoticiaDestaque(_urlToImage) {
+ mostrarNoticiaDestaque(_urlToImage) {
     if (_urlToImage != " ") {
 
       return `
-        <div>${this._urlToImage}</div>
+      <div class="row p-5 text-center">
+        <img src="${this._urlToImage}"></img>
+        </div>
+
+      <div class="row p-3 mt-3" style="background-color: white;">
+        <div class="titulo_destaque text-center"><a href="${this._url}">${this._title}</a></div>
+        <div class="data_destaque">${this._publishedAt}</div>
+        <div class="ator_destaque">${this._author}</div><br><br>
+        <div class="descricao_destaque">${this._description}</div>
+      </div>
       `;
-      //return this._imagemDestaque;
+
     } else {
       throw new ErroCustomizado("Algo está vazio!Cheque se a imagem está preenchida");
     }
